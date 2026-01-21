@@ -1,59 +1,63 @@
-# StockManager
+# StockManager 📦
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.5.
+O **StockManager** é um MVP de controle de estoque de alta performance, desenvolvido com **Angular 21**. O projeto foca em arquitetura frontend moderna, utilizando funcionalidades nativas do framework para garantir reatividade e escalabilidade.
 
-## Development server
+## 🚀 Tecnologias Principais
 
-To start a local development server, run:
+- **Framework:** Angular 21 (v21.0.0) com Standalone Components.
+- **Linguagem:** TypeScript.
+- **Estado e Reatividade:** Angular Signals e RxJS (map, filter, switchMap).
+- **UI/Design:** Angular Material com Layout Dashboard (Flexbox/Grid).
+- **Backend & Auth:** Firebase (Authentication + Firestore).
+- **Container:** Docker (Nginx + Angular Build).
 
-```bash
-ng serve
-```
+## 🛠️ Qualidade de Código e Padronização
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Para garantir um desenvolvimento organizado e livre de erros comuns, o projeto utiliza:
 
-## Code scaffolding
+- **ESLint:** Configuração moderna (Flat Config) integrada ao Angular.
+- **Prettier:** Padronização de formatação de código.
+- **Husky & lint-staged:** Hooks de pré-commit que validam o Lint e a formatação automaticamente antes de cada commit.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 🏗️ Arquitetura e Decisões Técnicas
 
-```bash
-ng generate component component-name
-```
+- **Change Detection OnPush:** Otimização de performance garantindo que o Angular verifique mudanças apenas quando necessário.
+- **Standalone Components:** Estrutura modular sem a necessidade de `NgModules`, seguindo as melhores práticas atuais do Angular.
+- **Dockerização:** Build multi-stage para gerar uma imagem leve com Nginx servindo os arquivos estáticos.
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🐳 Docker (Execução em Container)
 
-```bash
-ng generate --help
-```
+O projeto está configurado para rodar em containers, garantindo o mesmo ambiente em qualquer máquina.
 
-## Building
+1.  **Construir a imagem:**
+    ```bash
+    docker build -t stock-manager .
+    ```
+2.  **Rodar o container:**
+    `bash
+    docker run -p 8080:80 stock-manager
+    `
+    O app ficará disponível em `http://localhost:8080`.
 
-To build the project run:
+## 🔧 Como Desenvolver Localmente
 
-```bash
-ng build
-```
+1.  **Clone o repositório:**
+    ```bash
+    git clone [https://github.com/DevDiana/stock-manager.git](https://github.com/DevDiana/stock-manager.git)
+    ```
+2.  **Instale as dependências:**
+    ```bash
+    npm install
+    ```
+3.  **Rode o projeto (Hot Reload):**
+    ```bash
+    npm start
+    ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
+### Próximos Passos
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- [ ] Instalação e Configuração do Angular Material.
+- [ ] Criação do Layout Dashboard (Menu lateral + Área de conteúdo).
+- [ ] Integração com Firebase Auth.
