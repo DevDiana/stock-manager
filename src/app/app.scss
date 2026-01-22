@@ -1,0 +1,25 @@
+.main-container {
+  height: calc(100vh - 64px);
+}
+
+mat-sidenav {
+  width: 260px;
+  background-color: #2b3036;
+  border-right: 1px solid #3e444c;
+
+  .mat-nav-list a {
+    color: #aeb2b7;
+    margin: 8px 16px;
+    border-radius: 8px;
+
+    &.active {
+      background-color: #3d444d;
+      color: #3498db;
+      border-left: 4px solid #3498db;
+    }
+
+    mat-icon {
+      color: inherit;
+    }
+  }
+}

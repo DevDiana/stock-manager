@@ -1,0 +1,59 @@
+@import 'variables';
+
+.sidebar {
+  width: 260px;
+  height: 100%;
+  background: $sidebar-bg !important;
+  color: $sidebar-text;
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden !important;
+  border-right: none !important;
+  box-shadow: none !important;
+
+  position: fixed;
+  inset: 0 auto 0 0;
+  max-width: 100vw;
+  max-height: 100vh;
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    padding: 16px 0;
+    gap: 4px;
+    overflow: hidden;
+  }
+
+  .menu-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 20px;
+    margin: 2px 12px;
+
+    color: $sidebar-text;
+    text-decoration: none;
+    font-size: 14px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: $hover-overlay;
+    }
+
+    &.active {
+      background: $active-blue !important;
+      color: $white !important;
+      font-weight: 500;
+
+      .icon {
+        filter: brightness(0) invert(1);
+      }
+    }
+    &.sub {
+      padding-left: 48px !important;
+      font-size: 13px;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@import 'variables';
+
+.main-container {
+  background-color: $dark-bg;
+}
+
+mat-sidenav {
+  width: 260px;
+  background-color: $sidebar-bg;
+  border-right: 1px solid $sidebar-border;
+}
