@@ -1,35 +1,66 @@
 @import 'variables';
 
 .header-toolbar {
+  background: $header-bg;
+  height: 70px;
   display: flex;
   align-items: center;
-  width: 100%;
-  background-color: $sidebar-bg;
+  padding: 0 30px;
   color: $white;
-  border-bottom: 1px solid $sidebar-border;
-  padding: 0 16px;
-  box-sizing: border-box;
+  box-shadow: none;
+  border: none;
+  font-size: 18px;
+
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    .logo-icon {
+      font-size: 24px;
+      font-weight: 600;
+      color: $primary-pink;
+      background: none;
+    }
+  }
+  .menu-button {
+    color: $primary-pink;
+  }
 
   .title {
+    font-size: 20px;
     font-weight: 500;
-    font-size: 18px;
-    margin: 0 0 0 8px;
-    color: $white;
+    letter-spacing: -0.5px;
+    color: $primary-pink;
   }
 
   .user-profile {
+    margin-left: auto;
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-left: auto;
-    color: $white;
+    background: none;
+    padding: 0;
+    border-radius: 0;
+
+    .username {
+      font-size: 15px;
+      font-weight: 400;
+      color: $primary-pink;
+    }
 
     img {
       width: 32px;
       height: 32px;
-      border-radius: 50%;
-      object-fit: cover;
-      display: block;
+      border-radius: 8px;
+      border: none;
     }
   }
+}
+
+:host,
+.header {
+  background: $header-bg;
+  box-shadow: none;
+  border: none;
 }

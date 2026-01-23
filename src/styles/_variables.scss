@@ -1,12 +1,19 @@
-$sidebar-bg: #2f343b;
-$sidebar-text: #cfd3dc;
-$sidebar-text-muted: #64748b;
-$sidebar-border: #334155;
+// Cores de Fundo e Estrutura (Baseado na referência premium)
+$sidebar-bg: #2b2f36;
+$header-bg: #2b2f36;
 $background-color: #181c22;
-$background-secondary: #21252b7e;
-
-$active-blue: #2b8cff;
-$hover-overlay: rgba(255, 255, 255, 0.05);
-
-$white: #ffffff;
 $dark-bg: #1e293b;
+$sidebar-border: rgba(255, 255, 255, 0.05);
+
+// Cores de Identidade (Rosa do Logo)
+$primary-pink: #fc4fb6d3;
+$active-color: $primary-pink;
+$hover-overlay: rgba(255, 0, 144, 0.08); // Rosa sutil para o mouse over
+
+// Cores de Texto
+$text-main: #f8f9fa;
+$text-muted: #94a3b8;
+$white: #ffffff;
+
+// Efeitos Visuais
+$card-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);

@@ -1,1 +1,13 @@
-<app-dashboard></app-dashboard>
+<mat-sidenav-container class="main-container">
+  <mat-sidenav #sidenav mode="side" class="custom-sidenav">
+    <app-sidenav></app-sidenav>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <app-header (toggleMenu)="sidenav.toggle()"></app-header>
+
+    <main class="page-content">
+      <router-outlet></router-outlet>
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>

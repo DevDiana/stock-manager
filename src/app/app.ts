@@ -1,12 +1,25 @@
-import { Component, signal } from '@angular/core';
-import { DashboardComponent } from './features/dashboard/dashboard.component';
+import { Component, inject, ViewChild } from '@angular/core';
+import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
+import { RouterModule } from '@angular/router';
+import { HeaderComponent } from './core/components/header/header.component';
+import { SidenavComponent } from './core/components/sidenav/sidenav.component';
+import { BreakpointObserver } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.html',
   styleUrl: './app.scss',
-  imports: [DashboardComponent],
+  imports: [SidenavComponent, HeaderComponent, MatSidenavModule, RouterModule],
 })
 export class App {
-  protected readonly title = signal('stock-manager');
+  private observer = inject(BreakpointObserver);
+
+  @ViewChild('sidenav') sidenav!: MatSidenav;
+  isMobile = false;
+
+  constructor() {
+    this.observer.observe(['(max-width: 800px)']).subscribe((res) => {
+      this.isMobile = res.matches;
+    });
+  }
 }

@@ -1,12 +1,12 @@
 <mat-toolbar class="header-toolbar">
-  <button mat-icon-button (click)="toggleMenu.emit()">
-    <mat-icon>menu</mat-icon>
-  </button>
-
-  <h1 class="tittle">StockManager</h1>
+  <div class="header-left">
+    <button mat-icon-button (click)="toggleMenu.emit()" class="menu-button">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <h1 class="title">StockManager</h1>
+  </div>
 
   <div class="user-profile">
-    <span>Username</span>
-    <img src="assets/images/user-avatar.png" alt="User Avatar" />
+    <span class="username">Olá, Diana</span>
   </div>
 </mat-toolbar>
