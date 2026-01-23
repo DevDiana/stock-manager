@@ -1,29 +1,48 @@
 # StockManager 📦
 
-O **StockManager** é um MVP de controle de estoque de alta performance, desenvolvido com **Angular 21**. O projeto foca em arquitetura frontend moderna, utilizando funcionalidades nativas do framework para garantir reatividade e escalabilidade.
+O **StockManager** é um MVP de controle de estoque desenvolvido em **Angular 21**, com foco em arquitetura frontend moderna, performance e boas práticas adotadas em produtos reais.
 
-## 🚀 Tecnologias Principais
+O projeto simula um sistema corporativo de gestão, cobrindo layout de dashboard, organização por features, qualidade de código e integração com serviços cloud. Ele foi criado como projeto demonstrativo para recrutadores e tech leads.
 
-- **Framework:** Angular 21 (v21.0.0) com Standalone Components.
-- **Linguagem:** TypeScript.
-- **Estado e Reatividade:** Angular Signals e RxJS (map, filter, switchMap).
-- **UI/Design:** Angular Material com Layout Dashboard (Flexbox/Grid).
-- **Backend & Auth:** Firebase (Authentication + Firestore).
-- **Container:** Docker (Nginx + Angular Build).
+---
 
-## 🛠️ Qualidade de Código e Padronização
+## 🚀 Tecnologias Utilizadas
 
-Para garantir um desenvolvimento organizado e livre de erros comuns, o projeto utiliza:
+### ✅ Já implementado
 
-- **ESLint:** Configuração moderna (Flat Config) integrada ao Angular.
-- **Prettier:** Padronização de formatação de código.
-- **Husky & lint-staged:** Hooks de pré-commit que validam o Lint e a formatação automaticamente antes de cada commit.
+- **Angular 21** (Standalone Components)
+- **TypeScript**
+- **Angular Material** (Dashboard e componentes UI)
+- **Docker** (Build Angular + Nginx)
+- **ESLint** (Flat Config)
+- **Prettier**
+- **Husky + lint-staged**
+
+### 🛠️ Em implementação
+
+- Estrutura de telas e navegação
+- Serviços de domínio (Produtos, Estoque)
+- Organização do projeto por features
+
+### 🔜 Planejado
+
+- **Firebase Authentication**
+- **Firestore (Banco de Dados)**
+- **Angular Signals**
+- **Guards de Rotas**
+- **HTTP Interceptors**
+- **Deploy em cloud (Firebase Hosting)**
+
+---
 
 ## 🏗️ Arquitetura e Decisões Técnicas
 
-- **Change Detection OnPush:** Otimização de performance garantindo que o Angular verifique mudanças apenas quando necessário.
-- **Standalone Components:** Estrutura modular sem a necessidade de `NgModules`, seguindo as melhores práticas atuais do Angular.
-- **Dockerização:** Build multi-stage para gerar uma imagem leve com Nginx servindo os arquivos estáticos.
+- Uso de **Standalone Components**, eliminando `NgModules`.
+- Estrutura baseada em **features**, facilitando manutenção e escalabilidade.
+- Preparação para **Change Detection OnPush**, focando em performance.
+- Projeto **dockerizado** para garantir consistência entre ambientes de desenvolvimento e produção.
+
+---
 
 ## 🐳 Docker (Execução em Container)
 
@@ -35,8 +54,8 @@ O projeto está configurado para rodar em containers, garantindo o mesmo ambient
     ```
 2.  **Rodar o container:**
     `bash
-    docker run -p 8080:80 stock-manager
-    `
+docker run -p 8080:80 stock-manager
+`
     O app ficará disponível em `http://localhost:8080`.
 
 ## 🔧 Como Desenvolver Localmente
@@ -56,8 +75,51 @@ O projeto está configurado para rodar em containers, garantindo o mesmo ambient
 
 ---
 
-### Próximos Passos
+## 🗺️ Roadmap do Projeto
 
-- [ ] Instalação e Configuração do Angular Material.
-- [ ] Criação do Layout Dashboard (Menu lateral + Área de conteúdo).
-- [ ] Integração com Firebase Auth.
+### Fase 1 — Fundamentos (concluído)
+
+- [x] Setup do Angular 21
+- [x] Configuração de ESLint (Flat Config)
+- [x] Configuração do Prettier
+- [x] Configuração do Husky + lint-staged
+- [x] Dockerização do projeto (Angular + Nginx)
+- [x] Estrutura inicial do layout (Dashboard)
+
+### Fase 2 — Estrutura Funcional
+
+- [ ] Organização do projeto por features
+- [ ] Implementação de navegação e rotas
+- [ ] Tela de listagem de produtos
+- [ ] Tela de cadastro de produtos
+- [ ] Tela de edição de produtos
+- [ ] Tela de controle de estoque
+
+### Fase 3 — Regras de Negócio
+
+- [ ] Serviço de produtos
+- [ ] Serviço de estoque
+- [ ] Validações de formulário
+- [ ] Indicadores de estoque crítico
+- [ ] Atualização de métricas no dashboard
+
+### Fase 4 — Autenticação e Segurança
+
+- [ ] Autenticação com Firebase Auth
+- [ ] Guards de rotas
+- [ ] Controle de permissões por perfil
+- [ ] Proteção de rotas privadas
+
+### Fase 5 — Qualidade e Performance
+
+- [ ] Uso de Angular Signals
+- [ ] Change Detection OnPush
+- [ ] Tratamento global de erros (Interceptor)
+- [ ] Loading states e feedbacks visuais
+
+### Fase 6 — Deploy e Entrega
+
+- [ ] Persistência de dados no Firestore
+- [ ] Configuração de ambiente (dev/prod)
+- [ ] Deploy em ambiente cloud
+- [ ] Documentação final do projeto
