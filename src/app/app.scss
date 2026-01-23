@@ -1,20 +1,22 @@
+@import 'variables';
+
 mat-sidenav-content {
   height: 100vh !important;
   display: flex !important;
   flex-direction: column !important;
-  overflow: hidden !important; // Trava o Header no topo
+  overflow: hidden !important;
 }
 
 .page-content {
-  flex: 1; // Ocupa todo o espaço vertical disponível abaixo do header
-  overflow-y: auto !important; // Habilita o scroll apenas aqui
+  flex: 1;
+  overflow-y: auto !important;
   overflow-x: hidden;
 
   padding: 24px 40px;
-  // O SEGREDO: Adiciona um espaço extra no fim para o scroll não bater no fundo
+
   padding-bottom: 80px !important;
 
   box-sizing: border-box;
-  background-color: #181c22 !important;
+  background-color: $background-color !important;
   -webkit-overflow-scrolling: touch;
 }

@@ -1,54 +1,71 @@
 <div class="dashboard-container">
   <header class="dashboard-header">
     <h2 class="page-title">Dashboard</h2>
-    <button class="btn-add">Adicionar Novo</button>
+    <button class="btn-add">
+      <mat-icon>add</mat-icon>
+      Adicionar Novo
+    </button>
   </header>
 
   <div class="stats-grid">
-    <div class="stat-card primary">
-      <div class="card-header">
+    <div class="stat-card graph-card">
+      <div class="card-content">
         <span class="card-label">Resumo de Vendas</span>
-        <mat-icon>trending_up</mat-icon>
+        <div class="chart-wrapper">
+          <canvas
+            baseChart
+            [data]="lineChartData"
+            [options]="lineChartOptions"
+            [type]="'line'"
+          ></canvas>
+        </div>
       </div>
-      <div class="chart-container">
-        <canvas baseChart [data]="lineChartData" [options]="lineChartOptions" [type]="'line'">
-        </canvas>
+      <mat-icon class="card-icon">trending_up</mat-icon>
+    </div>
+
+    <div class="stat-card">
+      <div class="card-content">
+        <span class="card-label">Total de Produtos</span>
+        <div class="card-value">65</div>
+        <span class="card-sub">Produtos cadastrados</span>
       </div>
+      <mat-icon class="card-icon">inventory_2</mat-icon>
     </div>
 
     <div class="stat-card">
-      <span class="card-label">Total de Produtos</span>
-      <div class="card-value">65</div>
-      <span class="card-sub">Produtos cadastrados</span>
-      <mat-icon>inventory_2</mat-icon>
+      <div class="card-content">
+        <span class="card-label">Estoque Crítico</span>
+        <div class="card-value pink">17</div>
+        <span class="card-sub">Itens abaixo do mínimo</span>
+      </div>
+      <mat-icon class="card-icon">warning</mat-icon>
     </div>
 
     <div class="stat-card">
-      <span class="card-label">Estoque Baixo</span>
-      <div class="card-value pink">R$ 17</div>
-      <span class="card-sub">Itens abaixo do mínimo</span>
-      <mat-icon>warning</mat-icon>
+      <div class="card-content">
+        <span class="card-label">Novos Clientes</span>
+        <div class="card-value">12</div>
+        <span class="card-sub">Registrados este mês</span>
+      </div>
+      <mat-icon class="card-icon">person_add</mat-icon>
     </div>
 
     <div class="stat-card">
-      <span class="card-label">Novos Clientes</span>
-      <div class="card-value">12</div>
-      <span class="card-sub">Este mês</span>
-      <mat-icon>person_add</mat-icon>
+      <div class="card-content">
+        <span class="card-label">Pedidos Pendentes</span>
+        <div class="card-value">08</div>
+        <span class="card-sub">Aguardando separação</span>
+      </div>
+      <mat-icon class="card-icon">pending_actions</mat-icon>
     </div>
 
     <div class="stat-card">
-      <span class="card-label">Pedidos Pendentes</span>
-      <div class="card-value">8</div>
-      <span class="card-sub">Aguardando envio</span>
-      <mat-icon>pending_actions</mat-icon>
-    </div>
-
-    <div class="stat-card">
-      <span class="card-label">Faturamento do Mês</span>
-      <div class="card-value">R$ 12.500</div>
-      <span class="card-sub">Atualizado hoje</span>
-      <mat-icon>attach_money</mat-icon>
+      <div class="card-content">
+        <span class="card-label">Faturamento Mensal</span>
+        <div class="card-value">R$ 12.500</div>
+        <span class="card-sub">Previsão de fechamento</span>
+      </div>
+      <mat-icon class="card-icon">payments</mat-icon>
     </div>
   </div>
 </div>

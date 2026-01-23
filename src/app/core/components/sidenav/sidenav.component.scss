@@ -4,9 +4,9 @@
   width: 260px;
   height: 100vh;
   background: $sidebar-bg;
-  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  border-right: 1px solid $sidebar-border;
   box-shadow: none;
-  padding-top: 70px; // altura do header
+  padding-top: 70px;
   position: fixed;
   top: 0;
   left: 0;
@@ -47,7 +47,7 @@
   i {
     font-size: 20px;
     width: 30px;
-    color: $white;
+    color: $icon-color;
   }
   span {
     font-weight: 500;
@@ -56,7 +56,7 @@
   }
 
   &:hover {
-    background: rgba(255, 255, 255, 0.04);
+    background: $hover-menu;
     color: $white;
   }
 

@@ -1,19 +1,20 @@
-// Cores de Fundo e Estrutura (Baseado na referência premium)
 $sidebar-bg: #2b2f36;
 $header-bg: #2b2f36;
 $background-color: #181c22;
-$dark-bg: #1e293b;
+$dark-bg: #2b2f36;
 $sidebar-border: rgba(255, 255, 255, 0.05);
 
-// Cores de Identidade (Rosa do Logo)
 $primary-pink: #fc4fb6d3;
+$secondary-pink: #ff47b6;
 $active-color: $primary-pink;
-$hover-overlay: rgba(255, 0, 144, 0.08); // Rosa sutil para o mouse over
+$hover-overlay: rgba(255, 0, 144, 0.08);
+$hover-menu: rgba(255, 255, 255, 0.04);
 
-// Cores de Texto
 $text-main: #f8f9fa;
 $text-muted: #94a3b8;
 $white: #ffffff;
 
-// Efeitos Visuais
 $card-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+$color-shadow: rgba(255, 71, 182, 0.4);
+
+$icon-color: rgb(255 255 255 / 20%);

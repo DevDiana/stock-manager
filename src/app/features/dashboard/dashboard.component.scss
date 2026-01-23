@@ -1,3 +1,5 @@
+@import 'variables';
+
 .dashboard-container {
   padding: 24px;
   width: 100%;
@@ -10,55 +12,121 @@
   align-items: center;
   margin-bottom: 32px;
   width: 100%;
+
+  .page-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: $white;
+    margin: 0;
+  }
+
   .btn-add {
-    background-color: transparent; // Fundo transparente para estilo 'outline'
-    color: #ff47b6; // O rosa da sua marca
-    border: 1px solid #ff47b6; // Borda fina rosa
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: transparent;
+    color: $secondary-pink;
+    border: 1px solid $secondary-pink;
     padding: 10px 20px;
-    border-radius: 8px; // Cantos arredondados suaves
-    font-weight: 500;
+    border-radius: 8px;
+    font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
 
-    &:hover {
-      background-color: #ff47b6; // Inverte as cores no hover
-      color: white;
-      box-shadow: 0 0 15px rgba(255, 71, 182, 0.4); // Efeito de brilho neon
+    mat-icon {
+      font-size: 20px;
+      width: 20px;
+      height: 20px;
     }
 
-    &:active {
-      transform: scale(0.95); // Efeito de clique
+    &:hover {
+      background-color: $secondary-pink;
+      color: $white;
+      box-shadow: 0 0 15px $color-shadow;
     }
   }
 }
 
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); // 3 colunas no desktop
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   width: 100%;
-  height: auto; // Permite que a altura cresça livremente
 
   @media (max-width: 1100px) {
-    grid-template-columns: 1fr; // 1 coluna no mobile
+    grid-template-columns: 1fr;
   }
 }
 
 .stat-card {
-  background-color: #2b2f36; // Cor da sua sidebar
+  position: relative;
+  background-color: $dark-bg;
   border-radius: 16px;
   padding: 24px;
-  min-height: 180px;
+  min-height: 170px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  transition: transform 0.2s;
+  justify-content: flex-start;
+  transition: transform 0.2s ease;
+  overflow: hidden;
 
   &:hover {
-    transform: translateY(-5px); // Efeito premium ao passar o mouse
+    transform: translateY(-5px);
   }
 
   &.primary {
-    background: #ff47b6; // O rosa exato da sua logo
+    background: $secondary-pink;
+    .card-label,
+    .card-value,
+    .card-sub {
+      color: $white;
+    }
   }
+
+  .card-label {
+    font-size: 14px;
+    color: $text-muted;
+    margin-bottom: 12px;
+    font-weight: 500;
+  }
+
+  .card-value {
+    font-size: 32px;
+    font-weight: 800;
+    color: $white;
+    margin-bottom: 10px;
+    margin-top: 20px;
+
+    &.pink {
+      color: $secondary-pink;
+    }
+  }
+
+  .card-sub {
+    font-size: 12px;
+    color: $text-muted;
+  }
+
+  .card-icon {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 32px !important;
+    height: 32px !important;
+    font-size: 32px !important;
+    line-height: 1 !important;
+
+    color: $icon-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible !important;
+  }
+}
+
+.chart-wrapper {
+  flex: 1;
+  width: 100%;
+  max-height: 100px;
+  margin-top: 10px;
 }
